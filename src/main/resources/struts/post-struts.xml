@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="post" extends="json-default">
+        <default-class-ref class="com.shuaichen.crm.post.action.PostAction"/>
+        <action name="postQuery" method="query">
+            <result name="success">/pages/post/listPost.jsp</result>
+        </action>
+
+        <action name="postDeptQuery" class="com.shuaichen.crm.department.action.DeptAction"
+                method="query">
+            <result name="success">/pages/post/addOrEditPost.jsp</result>
+        </action>
+
+        <!--<action name=""-->
+    </package>
+
+
+</struts>
